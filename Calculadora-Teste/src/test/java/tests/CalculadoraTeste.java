@@ -1,9 +1,22 @@
 package tests;
 import control.Calculadora;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Before;
 
 public class CalculadoraTeste {
+
+    Calculadora calc;
+    @Before
+    public void setup() {
+        calc = new Calculadora();
+    }
+
+    @After
+    public void tearDown(){
+        calc = null;
+  ;  }
 
     @Test
     public void testeSomar() {
